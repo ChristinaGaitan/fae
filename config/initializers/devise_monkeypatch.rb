@@ -4,8 +4,6 @@
 # chances are this can be removed after the next Devise release
 Devise::FailureApp.class_eval do
   def scope_url
-    context = send(Devise.available_router_name)
-    route = :"new_#{scope}_session_url"
-    context.send(route, {})
+    return "/users/sign_in"
   end
 end
