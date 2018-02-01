@@ -19,7 +19,7 @@ header.main-header#js-main-header
         a.grabatar-link href="#"
           img.grabatar src=fae_avatar alt=current_user.full_name
         ul
-          li: a href=fae.destroy_user_session_path Log Out
+          li: a data-method="delete" href="/users/sign_out" Log Out
           li: a href=fae.settings_path Your Settings
 
       li.utility-dropdown.js-utility-dropdown

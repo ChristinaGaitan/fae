@@ -47,7 +47,7 @@ nav.nav.mobilenav
       li.mobilenav-user
         span.mobilenav-user-header = current_user.full_name
         ul
-          li: a.-logout href=fae.destroy_user_session_path Log Out
+          li: a.-logout data-method="delete" href="/users/sign_out" Log Out
           li: a.-settings href=fae.settings_path Your Settings
           li: a.-support href=fae.help_path Support
     - site_urls_are_present = @option.stage_url.present? && @option.live_url.present?
